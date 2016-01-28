@@ -1,0 +1,163 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Produce</h2>
+
+<div class="container">
+    <div class="col-sm-2">
+        <h2>Vegetables:</h2>
+        <ul>
+            <li><a href="#">    Acorn Squash	</a></li>
+            <li><a href="#">	Amaranth	</a></li>
+            <li><a href="#">	Arrowroot	</a></li>
+            <li><a href="#">	Artichokes 	</a></li>
+            <li><a href="#">	Asparagus 	</a></li>
+            <li><a href="#">	Banana Squash	</a></li>
+            <li><a href="#">	Beets	</a></li>
+            <li><a href="#">	Belgian Endive	</a></li>
+            <li><a href="#">	Belgian Endive	</a></li>
+            <li><a href="#">	Belgian Endive 	</a></li>
+            <li><a href="#">	Bell Peppers	</a></li>
+            <li><a href="#">	Bell Peppers	</a></li>
+            <li><a href="#">	Black Eyed Peas	</a></li>
+            <li><a href="#">	Black Radish	</a></li>
+            <li><a href="#">	Black Salsify	</a></li>
+            <li><a href="#">	Bok Choy	</a></li>
+            <li><a href="#">	Broccoflower	</a></li>
+            <li><a href="#">	Broccoli	</a></li>
+            <li><a href="#">	Broccoli	</a></li>
+            <li><a href="#">	Broccolini	</a></li>
+            <li><a href="#">	Brussels Sprouts	</a></li>
+            <li><a href="#">	Brussels Sprouts	</a></li>
+            <li><a href="#">	Burdock Root	</a></li>
+            <li><a href="#">	Butter Lettuce	</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-2">
+        <br /><br /><br />
+        <ul>
+            <li><a href="#">	Butter Lettuce	</a></li>
+            <li><a href="#">	Butter Lettuce	</a></li>
+            <li><a href="#">	Buttercup Squash	</a></li>
+            <li><a href="#">	Buttercup Squash	</a></li>
+            <li><a href="#">	Butternut Squash	</a></li>
+            <li><a href="#">	Cabbage	</a></li>
+            <li><a href="#">	Cactus	</a></li>
+            <li><a href="#">	Carrots	</a></li>
+            <li><a href="#">	Cauliflower	</a></li>
+            <li><a href="#">	Celeriac (Celery Root)	</a></li>
+            <li><a href="#">	Celery	</a></li>
+            <li><a href="#">	Chayote Squash	</a></li>
+            <li><a href="#">	Chayote Squash	</a></li>
+            <li><a href="#">	Chayote Squash 	</a></li>
+            <li><a href="#">	Cherry Tomatoes	</a></li>
+            <li><a href="#">	Chinese Eggplants	</a></li>
+            <li><a href="#">	Chinese Long Beans	</a></li>
+            <li><a href="#">	Chinese Long Beans	</a></li>
+            <li><a href="#">	Chives	</a></li>
+            <li><a href="#">	Collard Greens	</a></li>
+            <li><a href="#">	Collard Greens	</a></li>
+            <li><a href="#">	Corn	</a></li>
+            <li><a href="#">	Corn	</a></li>
+            <li><a href="#">	Crookneck Squash	</a></li>
+            <li><a href="#">	Cucumbers	</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-2">
+        <br /><br /><br />
+        <ul>
+            <li><a href="#">	Delicata Squash	</a></li>
+            <li><a href="#">	Delicata Squash	</a></li>
+            <li><a href="#">	Diakon Radish	</a></li>
+            <li><a href="#">	Eggplant	</a></li>
+            <li><a href="#">	Endive	</a></li>
+            <li><a href="#">	Endive	</a></li>
+            <li><a href="#">	Fava Beans	</a></li>
+            <li><a href="#">	Fennel	</a></li>
+            <li><a href="#">	Fiddlehead Ferns	</a></li>
+            <li><a href="#">	Galangal Root	</a></li>
+            <li><a href="#">	Garlic	</a></li>
+            <li><a href="#">	Garlic	</a></li>
+            <li><a href="#">	Ginger	</a></li>
+            <li><a href="#">	Green Beans	</a></li>
+            <li><a href="#">	Green Beans	</a></li>
+            <li><a href="#">	Green Soybeans (Edamame)	</a></li>
+            <li><a href="#">	Jalapeno Peppers	</a></li>
+            <li><a href="#">	Jalapeno Peppers	</a></li>
+            <li><a href="#">	Jerusalem Artichoke	</a></li>
+            <li><a href="#">	Kale	</a></li>
+            <li><a href="#">	Kohlrabi	</a></li>
+            <li><a href="#">	Leek	</a></li>
+            <li><a href="#">	Leeks	</a></li>
+            <li><a href="#">	Lettuce	</a></li>
+            <li><a href="#">	Lima Beans	</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-2">
+        <br /><br /><br />
+        <ul>
+            <li><a href="#">	Manoa Lettuce	</a></li>
+            <li><a href="#">	Manoa Lettuce	</a></li>
+            <li><a href="#">	Morel Mushrooms	</a></li>
+            <li><a href="#">	Mushrooms	</a></li>
+            <li><a href="#">	Mustard Greens	</a></li>
+            <li><a href="#">	Okra	</a></li>
+            <li><a href="#">	Olives	</a></li>
+            <li><a href="#">	Onions	</a></li>
+            <li><a href="#">	Parsnips	</a></li>
+            <li><a href="#">	Pea Pods	</a></li>
+            <li><a href="#">	Pearl Onions	</a></li>
+            <li><a href="#">	Peas	</a></li>
+            <li><a href="#">	Peas	</a></li>
+            <li><a href="#">	Potatoes	</a></li>
+            <li><a href="#">	Pumpkin	</a></li>
+            <li><a href="#">	Purple Asparagus	</a></li>
+            <li><a href="#">	Radicchio	</a></li>
+            <li><a href="#">	Radicchio	</a></li>
+            <li><a href="#">	Radishes	</a></li>
+            <li><a href="#">	Ramps	</a></li>
+            <li><a href="#">	Red Leaf Lettuce	</a></li>
+            <li><a href="#">	Rhubarb 	</a></li>
+            <li><a href="#">	Rutabagas	</a></li>
+            <li><a href="#">	Salad Savoy	</a></li>
+            <li><a href="#">	Shallots	</a></li>
+        </ul>
+    </div>
+
+    <div class="col-sm-2">
+        <br /><br /><br />
+        <ul>
+            <li><a href="#">	Snow Peas	</a></li>
+            <li><a href="#">	Snow Peas	</a></li>
+            <li><a href="#">	Sorrel	</a></li>
+            <li><a href="#">	Spinach	</a></li>
+            <li><a href="#">	Spring Baby Lettuce	</a></li>
+            <li><a href="#">	Sugar Snap Peas	</a></li>
+            <li><a href="#">	Summer Squash	</a></li>
+            <li><a href="#">	Sweet Dumpling Squash	</a></li>
+            <li><a href="#">	Sweet Dumpling Squash	</a></li>
+            <li><a href="#">	Sweet Potatoes	</a></li>
+            <li><a href="#">	Sweet Potatoes	</a></li>
+            <li><a href="#">	Swiss Chard	</a></li>
+            <li><a href="#">	Swiss Chard	</a></li>
+            <li><a href="#">	Tomatillo	</a></li>
+            <li><a href="#">	Tomatoes	</a></li>
+            <li><a href="#">	Turnips	</a></li>
+            <li><a href="#">	Turnips	</a></li>
+            <li><a href="#">	Vidalia Onions	</a></li>
+            <li><a href="#">	Wasabi Root	</a></li>
+            <li><a href="#">	Watercress	</a></li>
+            <li><a href="#">	Winged Beans	</a></li>
+            <li><a href="#">	Winter Squash	</a></li>
+            <li><a href="#">	Winter Squash	</a></li>
+            <li><a href="#">	Yukon Gold Potatoes	</a></li>
+            <li><a href="#">	Zucchini	</a></li>
+        </ul>
+    </div>
+
+    <div class="col-sm-2">
+        <!--Spacer area.sadsa-->
+    </div>
+</div>

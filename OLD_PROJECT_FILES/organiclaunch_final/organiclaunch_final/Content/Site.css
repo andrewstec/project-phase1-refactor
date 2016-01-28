@@ -1,0 +1,152 @@
+﻿body {
+}
+img{
+    max-width:100%;
+    height:auto;
+}
+div.cover-slides {
+    margin-bottom: 0;
+    background-image: url('img/L8XDQ7077F.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    background-position-y: -160px;
+}
+@media only screen and (max-width:1180px){
+    div.cover-slides{
+        background-position-y: 0px;
+    }
+}
+div.headings{
+    max-width: 700px;
+    margin: 9em auto;
+    text-align: center;
+    color: #fff;
+}
+div.dropdown-cities{
+    float:right;
+    margin-top:7px;
+}
+
+.top_category {
+    font-weight: 900;
+}
+
+.search {
+   background: rgba(171, 172, 148, 0.87);
+   width: 176px;
+   padding: 3px;
+   font-size: 1em;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   color:#efefef;
+}
+thead.top_category{
+    background: #302D19;
+    color: #fff;
+}
+table.table thead>tr>th, 
+table.table tbody>tr>th, 
+table.table tfoot>tr>th, 
+table.table thead>tr>td, 
+table.table tbody>tr>td, 
+table.table tfoot>tr>td{
+    padding:10px 20px;
+}
+table.table th, .table td { 
+     border: none !important; 
+ }
+table td, table tr {
+    border: none !important;
+}
+@media only screen and (max-width:767px){
+    table.table th,
+    table.table td{
+        display:block;
+    }
+}
+
+select.cities {
+   background: rgba(171, 172, 148, 0.87);
+   width: 176px;
+   padding: 3px;
+   font-size: 1em;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   color:#efefef;
+   }
+
+@media only screen and (max-width:767px){
+    div.dropdown-cities{float:left;}
+}
+div.navbar-collapse.collapse{float:left;}
+div.navbar-header{float:right;}
+a.btn.btn-primary{background:transparent; color:forestgreen; border:1px solid forestgreen;}
+a.btn.btn-primary:hover{background-color:forestgreen; color:#fff; border:1px solid forestgreen;}
+
+div.navbar-inverse .navbar-nav>li>a{color:#fff;}
+div.navbar-inverse .navbar-nav>li>a:hover{color:#999;}
+
+div.navbar-inverse{border:0; background: rgba(64, 60, 22, 0.90);}
+.logo{float:left;}
+img{max-width:100%; height:auto;}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+div.container p,
+div.container h2,
+div.container h1{text-align:center;}
+
+div section nav{
+    position: static;
+    margin-top: 30px;
+    width: 228px;
+}
+div .nav-container nav p{
+    border: 0 #eee solid;
+    text-align:left;
+    background: #eee;
+}
+div section nav p a{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color:#333;
+}
+@media only screen and (max-width:767px){
+    div section nav{
+        position: static;
+        margin-top: 30px;
+        width: auto;
+        margin-bottom: 30px;
+    }
+    div section nav p,div section nav p a{
+        display:inline;
+    }
+    section#generic-tabs ul li a{
+        font-size: 1em;
+        padding: 1em 0;
+    }
+}
+.form-container{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.login{
+    background: #302D19;
+}

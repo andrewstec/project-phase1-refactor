@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <section class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
+        <h2>Bakery</h2>
+        <p>
+            <img src="~/Content/img/organic-farm-icons_prod.png" width="151" class="col-xs-12" />
+            Enter the world of cereals and grain to discover refined and unrefined products such as wheat, barley and rye.
+        </p>
+        <p>@Html.ActionLink("Bakery", "Bakery", "Product", new { @class = "btn btn-primary" })</p>
+    </section>
+    <div class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
+        <h2>Meat</h2>
+        <p>
+            <img src="~/Content/img/organic-farm-icons.png" width="151" class="col-xs-12" />
+            A traditional farm environment leads to well-treated and healthy animals. Find butchered and non-butchered livestock.
+        </p>
+        <p>@Html.ActionLink("Meat", "Meat", "Product", new { @class = "btn btn-primary" })</p>
+    </div>
+    <section class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
+        <h2>Produce</h2>
+        <p>
+            <img src="~/Content/img/organic-farm-icons_pum.png" width="151" class="col-xs-12" />
+            Fruits and vegetables are what our parents told us to eat. Enjoy their whole and unprocessed properties.
+        </p>
+        <div class="row">
+            <p>@Html.ActionLink("Produce", "Produce", "Product", new { @class = "btn btn-primary" })</p>
+        </div>
+    </section>
+    <section class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
+        <h2>Grocery</h2>
+        <p>
+            <img src="~/Content/img/organic-farm-icons_eggs.png" width="151" class="col-xs-12" />
+            Not just eggs, but jellies, cheeses, and wines that require that you throw good parties.
+        </p>
+        <div class="row">
+            <p>@Html.ActionLink("Grocery", "Grocery", "Product", new { @class = "btn btn-primary" })</p>
+        </div>
+    </section>
+</div>

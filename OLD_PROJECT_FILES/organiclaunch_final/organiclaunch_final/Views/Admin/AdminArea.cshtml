@@ -1,0 +1,274 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+
+
+
+<div id="wrapper">
+    <section id="generic-tabs">
+        <h1 class="callout">Administrator Login</h1>
+        <h3>Welcome to the Employee Area. Please select an area to oversee or make changes:</h3>
+        <ul id="tabs">
+            <li>
+                <a title="Home" href="#first-tab"><i class="fa fa-home"></i>Accounts</a>
+            </li>
+            <li>
+                <a title="Photos" href="#second-tab"><i class="fa fa-picture-o"></i> Products</a>
+            </li>
+            <li>
+                <a title="About" href="#third-tab"><i class="fa fa-info-circle"></i> Employees</a>
+            </li>
+        </ul>
+        <div id="first-tab" class="tab-content">
+            <h3>User Account</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                 <tbody>
+                     <tr>
+                         <td>Jonathan</td>
+                         <td>Henry</td>
+                         <td>jp@gmail.com</td>
+                         <td>778 434 1081</td>
+                     </tr>
+                     <tr>
+                         <td>Hermione</td>
+                         <td>Wyatt</td>
+                         <td>sem.consequat@Fuscealiquet.com</td>
+                         <td>1-294-992-4615</td>
+                     </tr>
+                     <tr>
+                         <td>Rosalyn</td>
+                         <td>Dalton</td>
+                         <td>nec@vehicularisusNulla.net</td>
+                         <td>1-837-637-6924</td>
+                     </tr>
+                     <tr>
+                         <td>Cleo</td>
+                         <td>Levi</td>
+                         <td>elit.Nulla.facilisi@sagittissemper.co.uk</td>
+                         <td>1-592-437-0282</td>
+                     </tr>
+                     <tr>
+                         <td>Tatum</td>
+                         <td>Leroy</td>
+                         <td>ornare.sagittis@atvelit.com</td>
+                         <td>1-986-179-8079</td>
+                     </tr>
+                     <tr>
+                         <td>Nina</td>
+                         <td>Logan</td>
+                         <td>lectus@adipiscingnon.edu</td>
+                         <td>1-833-413-0300</td>
+                     </tr>
+                     <tr>
+                         <td>Aurelia</td>
+                         <td>Zachary</td>
+                         <td>ac@sedtortor.ca</td>
+                         <td>1-881-708-8839</td>
+                     </tr>
+                 </tbody>
+            </table>
+
+            <h3>Employee Account</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bob</td>
+                        <td>Jones</td>
+                        <td>bobjones@gmail.com</td>
+                        <td>604 434 1081</td>
+                    </tr>
+                    <tr>
+                        <td>Winifred</td>
+                        <td>Darius</td>
+                        <td>natoque@at.org</td>
+                        <td>1-515-940-2885</td>
+                    </tr>
+                    <tr>
+                        <td>Illana</td>
+                        <td>Orlando</td>
+                        <td>rutrum.justo.Praesent@vitae.edu</td>
+                        <td>1-828-608-4805</td>
+                    </tr>
+                    <tr>
+                        <td>Kyra</td>
+                        <td>Malachi</td>
+                        <td>luctus@Integervulputaterisus.net</td>
+                        <td>1-246-843-0707</td>
+                    </tr>
+                    <tr>
+                        <td>Beatrice</td>
+                        <td>Chaim</td>
+                        <td>Suspendisse.commodo.tincidunt@atvelit.ca</td>
+                        <td>1-430-825-3412</td>
+                    </tr>
+                    <tr>
+                        <td>Veronica</td>
+                        <td>Duncan</td>
+                        <td>lorem@temporest.co.uk</td>
+                        <td>1-383-174-0201</td>
+                    </tr>
+                    <tr>
+                        <td>Breanna</td>
+                        <td>Sean</td>
+                        <td>metus@diamat.net</td>
+                        <td>1-905-776-7738</td>
+                    </tr>
+                    <tr>
+                        <td>Odessa</td>
+                        <td>Joel</td>
+                        <td>arcu@nequetellusimperdiet.net</td>
+                        <td>1-949-578-9134</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="second-tab" class="tab-content">
+            <section class="col-sm-4 nav-container">
+                <nav>
+                    <p>@Html.ActionLink("Meats", "Produce", "Product")</p>
+                    <p>@Html.ActionLink("Vegetables", "Produce", "Product")</p>
+                    <p>@Html.ActionLink("Produce", "Produce", "Product")</p>
+                    <p>@Html.ActionLink("Dairy", "Produce", "Product")</p>
+                </nav>
+            </section>
+            <section class="col-sm-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Available</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bacon</td>
+                            <td>$22.00</td>
+                            <td>15 lbs</td>
+                            <td>100 in stock</td>
+                        </tr>
+                        <tr>
+                            <td>Milk</td>
+                            <td>$7.00</td>
+                            <td>3 lbs</td>
+                            <td>115 in stock</td>
+                        </tr>
+                        <tr>
+                            <td>Breasts</td>
+                            <td>$1.00</td>
+                            <td>1 lbs</td>
+                            <td>8 in stock</td>
+                        </tr>
+                        <tr>
+                            <td>Wheat</td>
+                            <td>$20.00</td>
+                            <td>90 lbs</td>
+                            <td>9 in stock</td>
+                        </tr>
+                        <tr>
+                            <td>Chicken</td>
+                            <td>$18.25</td>
+                            <td>25 lbs</td>
+                            <td>11 in stock</td>
+                        </tr>
+                        <tr>
+                            <td>Potatoes</td>
+                            <td>$19.50</td>
+                            <td>155 lbs</td>
+                            <td>7 in stock</td>
+                        </tr>
+                        <tr>
+                            <td>Lettuce</td>
+                            <td>$8.00</td>
+                            <td>12 lbs</td>
+                            <td>9 in stock</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <div id="third-tab" class="tab-content">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jonathan</td>
+                        <td>Henry</td>
+                        <td>jp@gmail.com</td>
+                        <td>778 434 1081</td>
+                    </tr>
+                    <tr>
+                        <td>Hermione</td>
+                        <td>Wyatt</td>
+                        <td>sem.consequat@Fuscealiquet.com</td>
+                        <td>1-294-992-4615</td>
+                    </tr>
+                    <tr>
+                        <td>Rosalyn</td>
+                        <td>Dalton</td>
+                        <td>nec@vehicularisusNulla.net</td>
+                        <td>1-837-637-6924</td>
+                    </tr>
+                    <tr>
+                        <td>Cleo</td>
+                        <td>Levi</td>
+                        <td>elit.Nulla.facilisi@sagittissemper.co.uk</td>
+                        <td>1-592-437-0282</td>
+                    </tr>
+                    <tr>
+                        <td>Tatum</td>
+                        <td>Leroy</td>
+                        <td>ornare.sagittis@atvelit.com</td>
+                        <td>1-986-179-8079</td>
+                    </tr>
+                    <tr>
+                        <td>Nina</td>
+                        <td>Logan</td>
+                        <td>lectus@adipiscingnon.edu</td>
+                        <td>1-833-413-0300</td>
+                    </tr>
+                    <tr>
+                        <td>Aurelia</td>
+                        <td>Zachary</td>
+                        <td>ac@sedtortor.ca</td>
+                        <td>1-881-708-8839</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="fourth-tab" class="tab-content">
+            <h1>Contact</h1>
+            <p>Lorem ipsum dolor sit amet, utroque splendide an quo. Omnesque pertinacia efficiantur vix at, soleat quaeque assueverit et vis. Te sit tale eripuit corrumpit, cum ea case graeci legimus. Sea ex assentior honestatis adversarium. Mei ea dico meis instructior, no eum ipsum voluptatum, quodsi pertinax postulant in sed. Te eum pertinacia suscipiantur, sea eirmod sanctus ea. Vel habeo feugait ea, an apeirian adversarium nam.</p>
+        </div>
+
+    </section>
+</div>
+

@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Admin Page</h2>
+
+<div class="form-container">
+    <h3>Please enter your credentials to proceed:</h3>
+
+    <form action="Admin/AdminArea">
+        <fieldset class="form-group">
+            <label for="username">Username</label>
+            <input type="email" class="form-control" id="username" placeholder="Enter Username">
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

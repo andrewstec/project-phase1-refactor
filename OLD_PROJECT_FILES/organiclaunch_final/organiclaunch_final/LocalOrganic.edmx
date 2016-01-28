@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SuperMarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="invoiceNum" />
+          </Key>
+          <Property Name="invoiceNum" Type="int" Nullable="false" />
+          <Property Name="branch" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="25" />
+          <Property Name="vendor" Type="varchar" MaxLength="25" />
+          <Property Name="price" Type="money" />
+        </EntityType>
+        <EntityType Name="ProductInvoice">
+          <Key>
+            <PropertyRef Name="productID" />
+            <PropertyRef Name="invoiceNum" />
+          </Key>
+          <Property Name="productID" Type="int" Nullable="false" />
+          <Property Name="invoiceNum" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Store">
+          <Key>
+            <PropertyRef Name="branch" />
+          </Key>
+          <Property Name="branch" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Invoice__branch__2C3393D0">
+          <End Role="Store" Type="Self.Store" Multiplicity="0..1" />
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Store">
+              <PropertyRef Name="branch" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="branch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProductIn__invoi__300424B4">
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+          <End Role="ProductInvoice" Type="Self.ProductInvoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="invoiceNum" />
+            </Principal>
+            <Dependent Role="ProductInvoice">
+              <PropertyRef Name="invoiceNum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProductIn__produ__2F10007B">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="ProductInvoice" Type="Self.ProductInvoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="productID" />
+            </Principal>
+            <Dependent Role="ProductInvoice">
+              <PropertyRef Name="productID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SuperMarketModelStoreContainer">
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductInvoice" EntityType="Self.ProductInvoice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Store" EntityType="Self.Store" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Invoice__branch__2C3393D0" Association="Self.FK__Invoice__branch__2C3393D0">
+            <End Role="Store" EntitySet="Store" />
+            <End Role="Invoice" EntitySet="Invoice" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProductIn__invoi__300424B4" Association="Self.FK__ProductIn__invoi__300424B4">
+            <End Role="Invoice" EntitySet="Invoice" />
+            <End Role="ProductInvoice" EntitySet="ProductInvoice" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProductIn__produ__2F10007B" Association="Self.FK__ProductIn__produ__2F10007B">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductInvoice" EntitySet="ProductInvoice" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SuperMarketModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="invoiceNum" />
+          </Key>
+          <Property Name="invoiceNum" Type="Int32" Nullable="false" />
+          <Property Name="branch" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Store" Relationship="Self.FK__Invoice__branch__2C3393D0" FromRole="Invoice" ToRole="Store" />
+          <NavigationProperty Name="Products" Relationship="Self.ProductInvoice" FromRole="Invoice" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="vendor" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Invoices" Relationship="Self.ProductInvoice" FromRole="Product" ToRole="Invoice" />
+        </EntityType>
+        <EntityType Name="Store">
+          <Key>
+            <PropertyRef Name="branch" />
+          </Key>
+          <Property Name="branch" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Invoices" Relationship="Self.FK__Invoice__branch__2C3393D0" FromRole="Store" ToRole="Invoice" />
+        </EntityType>
+        <Association Name="FK__Invoice__branch__2C3393D0">
+          <End Role="Store" Type="Self.Store" Multiplicity="0..1" />
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Store">
+              <PropertyRef Name="branch" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="branch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProductInvoice">
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="SuperMarketEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Invoices" EntityType="Self.Invoice" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="Stores" EntityType="Self.Store" />
+          <AssociationSet Name="FK__Invoice__branch__2C3393D0" Association="Self.FK__Invoice__branch__2C3393D0">
+            <End Role="Store" EntitySet="Stores" />
+            <End Role="Invoice" EntitySet="Invoices" />
+          </AssociationSet>
+          <AssociationSet Name="ProductInvoice" Association="Self.ProductInvoice">
+            <End Role="Invoice" EntitySet="Invoices" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SuperMarketModelStoreContainer" CdmEntityContainer="SuperMarketEntities">
+          <EntitySetMapping Name="Invoices">
+            <EntityTypeMapping TypeName="SuperMarketModel.Invoice">
+              <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="invoiceNum" ColumnName="invoiceNum" />
+                <ScalarProperty Name="branch" ColumnName="branch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="SuperMarketModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="productID" ColumnName="productID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="vendor" ColumnName="vendor" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stores">
+            <EntityTypeMapping TypeName="SuperMarketModel.Store">
+              <MappingFragment StoreEntitySet="Store">
+                <ScalarProperty Name="branch" ColumnName="branch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="ProductInvoice" TypeName="SuperMarketModel.ProductInvoice" StoreEntitySet="ProductInvoice">
+            <EndProperty Name="Invoice">
+              <ScalarProperty Name="invoiceNum" ColumnName="invoiceNum" />
+            </EndProperty>
+            <EndProperty Name="Product">
+              <ScalarProperty Name="productID" ColumnName="productID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
