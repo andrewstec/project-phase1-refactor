@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head><title>Farm Sale Project</title></head>
+<style>
+	body{
+	width:960px;
+	background:red;
+}
+
+</style>
+<body>
+<div >
+<h1>Our Farm Sale Project</h1>
+<p>Our application will generate revenue from connecting farmers with consumers, 
+whether the consumer is a business or person who is interested in fresh farm produce. 
+A portion of sales that occur on our website will fund our business. </p>
+
+<h2>Functional Requirements</h2>
+<p>
+
+<pre>
+Essential
+1.	User Login
+2.	Administrators
+-	Manage all accounts (edit/add/remove accounts)
+-	View transaction history
+3.	Farmers
+-	Manage products (add/edit/remove products)
+-	Edit information about their farm (location, hours of operation)
+4.	Users (buyers)
+-	Browse farms
+-	Browse product listings from farms
+-	Contact farms for information(email)
+-	Edit account information (change password, address)
+
+</pre>
+<?PHP
+
+$file_path = "http://farmsale.funkyprogrammer.com/CRUD/Essential.htm";
+$content=file_get_contents($file_path);
+echo $content;
+
+?>
+</p>
+</div>
+
+</body>
+</html>

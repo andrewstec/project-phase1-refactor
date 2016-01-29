@@ -23,13 +23,16 @@ CREATE TABLE Account (
 	accountType		VARCHAR(50)
 	);
 CREATE TABLE Product (
-	productID		INT IDENTITY PRIMARY KEY, 
-	productName		VARCHAR(50), 
-	price			DECIMAL(19, 2)
+	productID			INT IDENTITY PRIMARY KEY, 
+	productName			VARCHAR(50), 
+	price				DECIMAL(19, 2),
+	productCategory		VARCHAR(50),
+	productDescription  VARCHAR(255)
   );
 CREATE TABLE Farm (
-	farmID			INT IDENTITY PRIMARY KEY, 
-	farmName		VARCHAR(50)
+	farmID				INT IDENTITY PRIMARY KEY, 
+	farmName			VARCHAR(50),
+	farmProfile			VARCHAR(255)
   );
 CREATE TABLE Address (
 	addressID		INT IDENTITY PRIMARY KEY, 
@@ -66,22 +69,22 @@ ALTER TABLE [Order] ADD CONSTRAINT FKOrder2 FOREIGN KEY (farmProductID) REFERENC
 ALTER TABLE AccountDetail ADD CONSTRAINT FKAccountDet1 FOREIGN KEY (addressID) REFERENCES Address (addressID);
 
 INSERT INTO Account VALUES('Tin', 'bcitpassword', 'tlau@my.bcit.ca', 'farmer');
-INSERT INTO Product VALUES('Lemons', 40.34);
-INSERT INTO Farm VALUES('Partridge Farms');
+INSERT INTO Product VALUES('Lemons', 40.34, 'Fruit', 'Fresh lemons.');
+INSERT INTO Farm VALUES('Partridge Farms', 'Patridge farms was established during the early American pioneer days in the days of Fort Vancouver. We have been producing poultry and lemons ever since.');
 INSERT INTO Address VALUES('1071', 'Harold Road', 'BC', 'Vancouver', 'Canada');
 INSERT INTO FarmProduct VALUES(5, 1, 1);
 INSERT INTO [Order] VALUES(1, 1);
 
 INSERT INTO Account VALUES('Slav', 'capilanopassword', 'svislas@my.sfu.ca', 'buyer');
-INSERT INTO Product VALUES('Oranges', 1.45);
-INSERT INTO Farm VALUES('Orangeville Farms');
+INSERT INTO Product VALUES('Oranges', 1.45, 'Fruit', 'Well-ripened oranges.');
+INSERT INTO Farm VALUES('Orangeville Farms', 'Organville farms takes citrus seriously. Deliscous, well-ripened fruit makes for excellent quality refreshments.');
 INSERT INTO Address VALUES('234', 'Stadium Road', 'BC', 'Vancouver', 'Canada');
 INSERT INTO FarmProduct VALUES(5, 1, 1);
 INSERT INTO [Order] VALUES(1, 1);
 
 INSERT INTO Account VALUES('Marrion', 'ubcpassword', 'mlulu@my.ubc.ca', 'buyer');
-INSERT INTO Product VALUES('Kobe Beef', 34578.34);
-INSERT INTO Farm VALUES('Japan Beef Farms');
+INSERT INTO Product VALUES('Kobe Beef', 34578.34, 'Beef', '1-month aged Kobe beef.');
+INSERT INTO Farm VALUES('Japan Beef Farms', 'The Kobe beef producer of Canada is regarded as the highest quality beef producer in the Pacific Northwest area.');
 INSERT INTO Address VALUES('54664', 'King George Road', 'BC', 'Prince George', 'Canada');
 INSERT INTO FarmProduct VALUES(5, 1, 1);
 INSERT INTO [Order] VALUES(1, 1);

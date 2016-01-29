@@ -1,0 +1,44 @@
+ESSENTIAL
+- User login
+	- Admin
+		- Manage all accounts (edit/add/remove)
+		- Manage payment system (refunds, ..)
+	- Farmers (Sellers)
+		- Manage (add/edit/remove products to be sold to buyers)
+		- Edit information about their location (hours of operation, ...)
+	- Buyers
+		- Browse farms
+		- Contact farms for info (email)
+		- Buy products from website
+		- Edit account information
+
+PAGES
+- Login page  ------------(done)
+- Home page   ------------(done)
+- Registration page  ------------(done)
+	- one for farmers  ------------(done)
+	- one for users  ------------(done)
+
+- Landing pages ------------(done)
+	- admin only ------------(done)
+	- farmer only ------------(done)
+	- user ------------(done)
+
+- User pages 
+	- Edit account information ------------(done)
+	- purchase product ------------(done)
+
+- Farmer pages
+	- Edit farm information ------------(done)
+	- Manage product listings (add/edit/remove)
+
+- Admin pages ------------(done)
+	- Manage users (edit/remove) ------------(done)
+	- Manage farmers (edit/remove) ------------(done)
+	- Assign roles ------------(done)
+	- View transaction history ------------(done)
+
+- Shared pages ------------(done)
+	- Browsing farms ------------(done)
+	- browsing products ------------(done)
+	- home page ------------(done)
