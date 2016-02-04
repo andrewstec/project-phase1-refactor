@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Organic_Launch.Product>
+
+@{
+    ViewBag.Title = "List";
+}
+
+
+
+@Html.Partial("_SideBar")
+
+<div class="col-sm-8">
+    <h2>Farmer's Page</h2>
+    @foreach (var item in Model)
+    {
+
+        <div class="col-sm-4">
+            <img src="" />
+            <ul>
+                <li>@Html.DisplayFor(modelItem => item.productName)</li>
+                <li>@Html.DisplayFor(modelItem => item.price)</li>
+                <li>@Html.DisplayFor(modelItem => item.productCategory)</li>
+                <li>@Html.DisplayFor(modelItem => item.productDescription)</li>
+            </ul>
+        </div>
+    }
+</div>
+
+
+

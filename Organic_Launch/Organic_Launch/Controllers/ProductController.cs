@@ -8,6 +8,7 @@ namespace Organic_Launch.Controllers
 {
     public class ProductController : Controller
     {
+        private FoodSaleAuthEntities db = new FoodSaleAuthEntities();
         // GET: Product
         public ActionResult Single()
         {
