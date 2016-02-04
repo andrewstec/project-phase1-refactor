@@ -8,16 +8,16 @@ namespace Organic_Launch.Controllers
 {
     public class ProductController : Controller
     {
-        private FoodSaleAuthEntities db = new FoodSaleAuthEntities();
+        private FarmSaleDBEntities db = new FarmSaleDBEntities();
         // GET: Product
-        public ActionResult Single()
+        public ActionResult Single(int id)
         {
-            return View();
+            return View(db.Products.Where(x => x.productID == id).FirstOrDefault());
         }
 
         public ActionResult List()
         {
-            return View();
+            return View(db.Products.ToList());
         }
 
         public ActionResult Create()

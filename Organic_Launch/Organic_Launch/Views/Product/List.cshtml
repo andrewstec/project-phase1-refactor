@@ -14,13 +14,16 @@
     {
 
         <div class="col-sm-4">
-            <img src="" />
+            <a href="@Url.Action("Single", "Product", new { id = item.productID})" id="@item.productID">
+                <img src="img/img.jpg" alt="@item.productName" />
+            </a>
             <ul>
                 <li>@Html.DisplayFor(modelItem => item.productName)</li>
                 <li>@Html.DisplayFor(modelItem => item.price)</li>
                 <li>@Html.DisplayFor(modelItem => item.productCategory)</li>
                 <li>@Html.DisplayFor(modelItem => item.productDescription)</li>
             </ul>
+
         </div>
     }
 </div>
