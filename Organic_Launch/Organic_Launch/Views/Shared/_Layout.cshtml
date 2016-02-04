@@ -22,8 +22,16 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Log In</a></li>
-                    <li><a href="#">Register</a></li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li><span>Welcome @Html.Raw(User.Identity.Name)</span></li>
+                        <li><a href="#">Log Out</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="#">Log In</a></li>
+                        <li><a href="#">Register</a></li>
+                    }
                 </ul>
             </div>
         </div>
