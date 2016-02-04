@@ -350,6 +350,8 @@
     <Content Include="Views\Product\List.cshtml" />
     <Content Include="Views\Product\Single.cshtml" />
     <Content Include="Views\Farm\Index.cshtml" />
+    <Content Include="Views\Farm\Create.cshtml" />
+    <Content Include="Views\Farm\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

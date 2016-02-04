@@ -8,6 +8,7 @@ namespace Organic_Launch.Controllers
 {
     public class FarmController : Controller
     {
+        private FarmSaleDBEntities db = new FarmSaleDBEntities();
         // GET: Farmer
         public ActionResult Index()
         {
@@ -16,7 +17,7 @@ namespace Organic_Launch.Controllers
 
         public ActionResult List()
         {
-            return View();
+            return View(db.Products.ToList());
         }
 
         public ActionResult Create()
