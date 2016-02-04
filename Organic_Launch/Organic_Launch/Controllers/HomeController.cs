@@ -13,7 +13,7 @@ namespace Organic_Launch.Controllers
         public ActionResult Index()
         {
             
-            return View(db.Farms.ToList());
+            return View();
         }
 
     }
