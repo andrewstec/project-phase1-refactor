@@ -135,12 +135,12 @@ namespace WebApplication1.Controllers
 
 
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult IndexSecurity()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Index(Login login)
+        public ActionResult IndexSecurity(Login login)
         {
             // UserStore and UserManager manages data retreival.
             UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
@@ -222,7 +222,7 @@ namespace WebApplication1.Controllers
             var ctx = Request.GetOwinContext();
             var authenticationManager = ctx.Authentication;
             authenticationManager.SignOut();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("IndexSecurity", "Home");
         }
     }
 }
