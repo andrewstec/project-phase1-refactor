@@ -20,7 +20,7 @@
                 @Html.ActionLink("Organic Launch", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">About Us</a></li>
                     @if (Request.IsAuthenticated)
                     {
@@ -40,14 +40,13 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <div class="logo">
-                @Html.ActionLink("Organic Launch", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <ul>
-                <li><a href="#">Terms and Condition</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Privacy</a></li>
+        <footer class="col-lg-12" style="text-align:center;">
+            
+            <ul style="list-style:none;">
+                <li style="display:inline;">@Html.ActionLink("Organic Launch", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                <li style="display:inline;"><a href="#">Terms and Condition</a></li>
+                <li style="display:inline;"><a href="#">About Us</a></li>
+                <li style="display:inline;"><a href="#">Privacy</a></li>
             </ul>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>

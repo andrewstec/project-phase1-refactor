@@ -4,48 +4,26 @@
     ViewBag.Title = "List";
 }
 
-<h2>List</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.productName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.productCategory)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.productDescription)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.productName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.productCategory)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.productDescription)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.productID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.productID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.productID })
-        </td>
-    </tr>
-}
+@Html.Partial("_SideBar")
 
-</table>
+<div class="col-sm-8">
+    <h2>Farmer's Page</h2>
+    @foreach (var item in Model)
+    {
+
+        <div class="col-sm-4">
+            <img src="" />
+            <ul>
+                <li>@Html.DisplayFor(modelItem => item.productName)</li>
+                <li>@Html.DisplayFor(modelItem => item.price)</li>
+                <li>@Html.DisplayFor(modelItem => item.productCategory)</li>
+                <li>@Html.DisplayFor(modelItem => item.productDescription)</li>
+            </ul>
+        </div>
+    }
+</div>
+
+
+

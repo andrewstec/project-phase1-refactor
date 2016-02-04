@@ -8,6 +8,7 @@ namespace Organic_Launch.Controllers
 {
     public class ProductController : Controller
     {
+        private OrganicLaunchEntities db = new OrganicLaunchEntities();
         // GET: Product
         public ActionResult Single()
         {
@@ -16,7 +17,7 @@ namespace Organic_Launch.Controllers
 
         public ActionResult List()
         {
-            return View();
+            return View(db.Products.ToList());
         }
 
         public ActionResult Create()
