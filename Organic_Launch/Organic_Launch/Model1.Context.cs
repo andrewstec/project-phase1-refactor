@@ -13,10 +13,10 @@ namespace Organic_Launch
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FarmSaleEntities : DbContext
+    public partial class FoodSaleAuthEntities : DbContext
     {
-        public FarmSaleEntities()
-            : base("name=FarmSaleEntities")
+        public FoodSaleAuthEntities()
+            : base("name=FoodSaleAuthEntities")
         {
         }
     
@@ -25,12 +25,10 @@ namespace Organic_Launch
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Account> Accounts { get; set; }
-        public virtual DbSet<AccountDetail> AccountDetails { get; set; }
-        public virtual DbSet<Address> Addresses { get; set; }
-        public virtual DbSet<Farm> Farms { get; set; }
-        public virtual DbSet<FarmProduct> FarmProducts { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
     }
 }

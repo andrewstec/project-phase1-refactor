@@ -12,15 +12,13 @@ namespace Organic_Launch
     using System;
     using System.Collections.Generic;
     
-    public partial class AccountDetail
+    public partial class AspNetUserClaim
     {
-        public int accountDetailID { get; set; }
-        public Nullable<int> accountID { get; set; }
-        public Nullable<int> farmID { get; set; }
-        public Nullable<int> addressID { get; set; }
+        public int Id { get; set; }
+        public string UserId { get; set; }
+        public string ClaimType { get; set; }
+        public string ClaimValue { get; set; }
     
-        public virtual Account Account { get; set; }
-        public virtual Farm Farm { get; set; }
-        public virtual Address Address { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

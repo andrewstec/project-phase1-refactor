@@ -12,22 +12,18 @@ namespace Organic_Launch
     using System;
     using System.Collections.Generic;
     
-    public partial class Address
+    public partial class AspNetRole
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Address()
+        public AspNetRole()
         {
-            this.AccountDetails = new HashSet<AccountDetail>();
+            this.AspNetUsers = new HashSet<AspNetUser>();
         }
     
-        public int addressID { get; set; }
-        public string streetNum { get; set; }
-        public string streetName { get; set; }
-        public string province { get; set; }
-        public string city { get; set; }
-        public string zip { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AccountDetail> AccountDetails { get; set; }
+        public virtual ICollection<AspNetUser> AspNetUsers { get; set; }
     }
 }

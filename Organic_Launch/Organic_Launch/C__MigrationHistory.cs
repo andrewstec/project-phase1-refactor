@@ -12,13 +12,11 @@ namespace Organic_Launch
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class C__MigrationHistory
     {
-        public int orderID { get; set; }
-        public Nullable<int> accountID { get; set; }
-        public Nullable<int> farmProductID { get; set; }
-    
-        public virtual Account Account { get; set; }
-        public virtual FarmProduct FarmProduct { get; set; }
+        public string MigrationId { get; set; }
+        public string ContextKey { get; set; }
+        public byte[] Model { get; set; }
+        public string ProductVersion { get; set; }
     }
 }
