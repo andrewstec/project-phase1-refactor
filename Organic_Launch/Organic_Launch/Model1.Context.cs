@@ -13,10 +13,10 @@ namespace Organic_Launch
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class OrganicLaunchEntities : DbContext
+    public partial class FarmSaleEntities : DbContext
     {
-        public OrganicLaunchEntities()
-            : base("name=OrganicLaunchEntities")
+        public FarmSaleEntities()
+            : base("name=FarmSaleEntities")
         {
         }
     

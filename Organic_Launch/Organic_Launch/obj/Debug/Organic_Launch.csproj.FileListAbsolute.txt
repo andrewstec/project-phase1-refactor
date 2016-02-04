@@ -48,3 +48,6 @@ c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_
 c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.csprojResolveAssemblyReference.cache
 c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.dll
 c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.pdb
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.csprojResolveAssemblyReference.cache
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.pdb
