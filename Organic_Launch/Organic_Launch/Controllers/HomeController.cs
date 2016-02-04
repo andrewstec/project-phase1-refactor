@@ -19,6 +19,11 @@ namespace WebApplication1.Controllers
         const string EMAIL_CONFIRMATION = "EmailConfirmation";
         const string PASSWORD_RESET = "ResetPassword";
 
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         [HttpGet]
         public ActionResult ForgotPassword()
         {
