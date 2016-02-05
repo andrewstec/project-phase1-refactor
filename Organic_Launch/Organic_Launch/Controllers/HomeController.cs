@@ -150,32 +150,42 @@ namespace WebApplication1.Controllers
             // UserStore and UserManager manages data retreival.
             UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
             UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
-            IdentityUser identityUser = manager.Find(login.UserName,
-                                                             login.Password);
-
-            if (ModelState.IsValid)
+            try
             {
-                if (ValidLogin(login))
+                IdentityUser identityUser = manager.Find(login.UserName,
+                                                             login.Password);
+                if (ModelState.IsValid)
                 {
-                    IAuthenticationManager authenticationManager
-                                           = HttpContext.GetOwinContext().Authentication;
-                    authenticationManager
-                   .SignOut(DefaultAuthenticationTypes.ExternalCookie);
+                    if (ValidLogin(login))
+                    {
+                        IAuthenticationManager authenticationManager
+                                               = HttpContext.GetOwinContext().Authentication;
+                        authenticationManager
+                       .SignOut(DefaultAuthenticationTypes.ExternalCookie);
 
-                    var identity = new ClaimsIdentity(new[] {
+                        var identity = new ClaimsIdentity(new[] {
                                             new Claim(ClaimTypes.Name, login.UserName),
                                         },
-                                        DefaultAuthenticationTypes.ApplicationCookie,
-                                        ClaimTypes.Name, ClaimTypes.Role);
-                    // SignIn() accepts ClaimsIdentity and issues logged in cookie. 
-                    authenticationManager.SignIn(new AuthenticationProperties
-                    {
-                        IsPersistent = false
-                    }, identity);
-                    return RedirectToAction("SecureArea", "Home");
+                                            DefaultAuthenticationTypes.ApplicationCookie,
+                                            ClaimTypes.Name, ClaimTypes.Role);
+                        // SignIn() accepts ClaimsIdentity and issues logged in cookie. 
+                        authenticationManager.SignIn(new AuthenticationProperties
+                        {
+                            IsPersistent = false
+                        }, identity);
+                        return RedirectToAction("SecureArea", "Home");
+                    }
                 }
             }
+            catch
+            {
+                ViewBag.Error = "Username and Password fields cannot be empty.";
+                return View();
+            }
+
+            ViewBag.Error = "Invalid Username or Password.";
             return View();
+
         }
         [HttpGet]
         public ActionResult Register()

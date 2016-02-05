@@ -25,13 +25,13 @@ namespace Organic_Launch.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        public ActionResult Edit(int id)
         {
-            return View();
+            return View(db.Farms.Where(i => i.farmID == id).FirstOrDefault());
         }
 
         [HttpPost]
-        public ActionResult Edit(int id)
+        public ActionResult Edit()
         {
             return View();
         }
