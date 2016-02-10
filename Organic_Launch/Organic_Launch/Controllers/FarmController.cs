@@ -40,5 +40,12 @@ namespace Organic_Launch.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            db.Farms.Remove(db.Farms.Where(i => i.farmID == id).FirstOrDefault());
+            return View();
+        }
     }
 }

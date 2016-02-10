@@ -19,7 +19,10 @@
                 <li>@Html.DisplayFor(modelItem => item.productCategory)</li>
                 <li>@Html.DisplayFor(modelItem => item.productDescription)</li>
             </ul>
-
+            <div>
+                <a href="@Url.Action("Edit", "Farm", new { id = item.productID})" id="@item.productID">Edit</a>
+                <a href="@Url.Action("Delete", "Farm")" id="@item.productID">Delete</a>
+            </div>
         </div>
     }
 
